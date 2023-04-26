@@ -17,7 +17,7 @@ import PhonePickupsContext from '../services/PhonePickupsContext.js'
 export default function CommitCard({ ...props }) {
 
   // variables
-  const { phonePickups, setPhonePickups } = useContext(PhonePickupsContext);
+  const { phonePickups } = useContext(PhonePickupsContext);
   const { address } = useAccount()
   const generateImageName = () => `${props.id}-image.png`;
 

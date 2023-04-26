@@ -42,14 +42,14 @@ export default function Commit() {
   const [showVideoEmbed, setShowVideoEmbed] = useState(false);
   const [videoWatched, setVideoWatched] = useState([false, false, false]);
   const [videoEmbedUrl, setVideoEmbedUrl] = useState(null);
-  const [phonePickups, setPhonePickups] = useState(null);
   const [showText, setShowText] = useState(false);
   const [userEmail, setUserEmail] = useState("null@null.com");
 
   // smart contract data
-  const { chain, chains } = useNetwork()
+  const { chain } = useNetwork()
   const { address } = useAccount()
   const provider = useProvider()
+  const { phonePickups, setPhonePickups } = useContext(PhonePickupsContext);
 
   // smart contract functions
   const { config: createCommitConfig } = usePrepareContractWrite({
