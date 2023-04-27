@@ -12,8 +12,8 @@ import PullToRefresh from 'react-simple-pull-to-refresh';
 const { chains, provider } = configureChains(
   // [chain.polygon, chain.mainnet], // to ENS reverse resolve
 
-  [chain.polygon], // APP or BETA
-  //[chain.polygonMumbai], // DEV
+  //[chain.polygon], // APP or BETA
+  [chain.polygonMumbai], // DEV
 
   [infuraProvider({}), publicProvider()]
 )
