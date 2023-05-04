@@ -8,10 +8,11 @@ export const sendAnEmail = (email: string): void => {
 
   const { emailJsServiceId, emailJsTemplateId, emailJsPublicKey } = env;
 
-  emailjs.send(
-    emailJsServiceId,
-    emailJsTemplateId,
-    templateParams,
-    emailJsPublicKey
-  );
+  if (emailJsServiceId && emailJsTemplateId)
+    emailjs.send(
+      emailJsServiceId,
+      emailJsTemplateId,
+      templateParams,
+      emailJsPublicKey
+    );
 };
