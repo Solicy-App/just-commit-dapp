@@ -209,17 +209,23 @@ export default function Commit() {
 
       <Header currentPage="index" />
       
-      <div className="container container--flex h-screen items-stretch">
-        <div className="mt-6 mb-0" style={{ padding: "10px" }}>
+      <div className="container container--flex items-stretch">
+        <div className="mt-4 mb-0" style={{ padding: "10px" }}>
           <FieldSet
             legend={
               <div className="text-center justify-center align-center">
+ 
+                <Typography className="" variant="" weight="small" style={{ lineHeight: '1.5em', fontSize: '0.65em' }}>
+                  <br />
+                  Just Commit is a 1-month challenge designed to
+                  <br />
+                  help you remove the surplus screen-time
+                  <br />
+                  from the leisure app you most use.
+                </Typography>
 
-                <Heading className="mb-4" color="textSecondary" style={{ fontWeight: '700', fontSize: '50px' }}>
-                  Welcome!
-                </Heading>
                 {!showText && (
-                  <div className="flex justify-center mt-12">
+                  <div className="flex justify-center">
                     <a
                       data-tooltip-id="my-tooltip"
                       data-tooltip-place="right"
@@ -230,48 +236,39 @@ export default function Commit() {
                       <Tag
                         style={{ background: '#1DD297' }}
                         size="large"
-                        className="hover:scale-125 cursor-pointer"
+                        className="hover:scale-125 cursor-pointer mt-6"
                       >
                         <b style={{ color: 'white' }}>?</b>
                       </Tag>
                     </a>
                   </div>
                 )}
+                
                 {showText && (
-                  <Typography className="-mb-6" variant="" weight="small" style={{ lineHeight: '1.4em', fontSize: '0.6em' }}>
-                    <br />
-                    Just Commit is a 1-month challenge designed to
-                    <br />
-                    help you remove 70% of the screen-time
-                    <br />
-                    from the leisure app you most use.
-                  </Typography>
-                )}
-                <br />
-                <br />
-                <Typography
-                  className="font-normal -mt-6"
-                  style={{
-                    lineHeight: '1em',
-                    fontSize: '0.6em',
-                  }}
-                >
-                  Get ready to feel more...{' '}
-                  <span
-                    className=""
+                  <Typography
+                    className="font-normal mt-6"
                     style={{
-                      background:
-                        'linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      fontStyle: 'italic',
-                      fontWeight: 'bold',
-                      fontSize: '2em',
+                      lineHeight: '1em',
+                      fontSize: '0.6em',
                     }}
                   >
-                    &nbsp;ALIVE&nbsp;
-                  </span>
-                </Typography>
+                    Get ready to feel more...{' '}
+                    <span
+                      className=""
+                      style={{
+                        background:
+                          'linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        fontStyle: 'italic',
+                        fontWeight: 'bold',
+                        fontSize: '2em',
+                      }}
+                    >
+                      &nbsp;ALIVE&nbsp;
+                    </span>
+                  </Typography>
+                )}
               </div>
             }
           />
@@ -343,7 +340,7 @@ export default function Commit() {
                       style={{ fontSize: '1.2em' }}
                       onClick={() => {}}
                     >
-                      <Typography>Select Addictive App</Typography>
+                      <Typography>Select Leisure App</Typography>
                     </div>
                   </div>
                   <div className="flex justify-center" style={{ direction: 'ltr'}}>
@@ -571,7 +568,7 @@ export default function Commit() {
                     labelSecondary={
                       <a
                         data-tooltip-id="my-tooltip"
-                        data-tooltip-content="It's optional"
+                        data-tooltip-content="Optional."
                         data-tooltip-place="top"
                       >
                         <Tag className="" style={{ background: "#1DD297" }} size="large">
