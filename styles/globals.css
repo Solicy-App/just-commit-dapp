@@ -39,17 +39,18 @@ a {
   margin: 0 auto;
 }
 .container--flex {
+  min-height: 100vh !important;
   display: flex;
   flex-direction: column;
   padding: 7rem 2rem 6rem 2rem;
   align-items: center;
-  min-height: 0vh;
   max-width: inherit;
   background-color: #F3F3F3;
 }
 
 .cardContainer {
-  background-color: #F3F3F3
+  background-color: #F3F3F3;
+  min-height: 100vh;
 }
 
 .heading {
